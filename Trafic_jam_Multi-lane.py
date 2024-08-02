@@ -356,6 +356,8 @@ for i6 in range(len(Lost_taken)):
 						# print('@@@@@@@@@@@',lost,'~~~:I am in the new nest.','@@@@@@@@@@@')
 						Lost_ant=np.delete(Lost_ant,np.where(Lost_ant==lost))
 				# print(len(Leaders))
+				if len(Leaders)>0:
+					np.random.shuffle(Leaders)
 				
 				for Leader in Leaders:
 					position_TL=np.where(Positions[Leader,:]==1)[0]
